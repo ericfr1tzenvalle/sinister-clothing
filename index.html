@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Sinister</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ol id="menu">
+                <div id="menu-mobile">
+                    <span class="material-symbols-outlined" id="mobMenu">
+                        menu
+                    </span>
+                   
+            </div>
+            
+                <li id="camisetas" class="menu-item">Camisetas</li>
+                <li id="blusas-jaquetas" class="menu-item">Blusas & Jaquetas</li>
+                <li id="headwear" class="menu-item">Headwear</li>
+                <img id="logo" class="logo" src="./assets/others/logo.png" alt="">
+                <li id="calcas-shorts" class="menu-item">Calças & Shorts</li>
+                <li id="camisas" class="menu-item">Camisas</li>
+                <li id="suporte" class="menu-item">Suporte</li>
+                <li style="border: none; color: crimson;"></li>
+                
+               
+                
+        
+            </ol>
+            
+            <div id="rodapeFixo">
+                <span class="material-symbols-outlined menu-item" id="meuCarrinho">
+                    shopping_cart
+                    </span>
+                <label for="">Total:</label>
+                <input type="text" value="R$0,00" id="total" readonly>
+                <button id="finalizar-compra">Finalizar</button>
+                <button id="limpar">Limpar</button>
+
+            </div>
+            
+        </nav>
+        
+        
+    </header>
+  
+    
+    
+    
+   <main>
+    
+    <div id="box-1">
+       
+       
+        
+    </div>
+    <div id="carrinho" >
+        <div id="produtos-carrinho">
+
+        </div>
+        <span class="material-symbols-outlined" id="close-car">close</span>
+
+    </div>
+    
+
+   </main>
+   <div id="popup" class="popup">
+    <div class="popup-content">
+        <p class="mostraTotal"></p>
+        <button id="popup-ok">OK</button>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+ 
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

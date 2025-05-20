@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    background-color: #131313;
+    background-size: 21%;
+}
+
+header {
+    background-color: #1d1d1d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.menu-mobile-items {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-mobile-items.show {
+    transform: translateX(0%);
+}
+
+
+#menu-close {
+    transform: scale(2);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.product {
+    animation: fadeIn 0.5s ease;
+}
+
+.menu-mobile-items li {
+    font-size: 40px;
+}
+#carrinho {
+    position: fixed;
+    background-color: #1d1d1d;
+    color: white;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40vh;
+    overflow-y: auto;
+    padding: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#carrinho.show {
+    transform: translateX(0%);
+}
+
+#produtos-carrinho {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.linha-produto {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.linha-produto img {
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.linha-produto span {
+    flex-grow: 1;
+    text-align: right;
+}
+
+
+#menu-mobile {
+    color: white;
+    cursor: pointer;
+    transform: scale(1.8);
+    display: none;
+}
+
+#menu {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+    border: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    letter-spacing: 0.1rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.2s;
+}
+
+li:hover {
+    color: crimson;
+    transition: all ease-in-out 0.2s;
+}
+
+#logo {
+    width: 75px;
+    transform: scale(1.2);
+}
+
+#menu-close {
+    cursor: pointer;
+}
+
+#menu-close:hover {
+    color: crimson;
+}
+
+#box-1 {
+    background-color: #131313;
+    margin-top: 6.5rem;
+    margin-inline: 8rem;
+    margin-bottom: 5rem;
+    padding: 3rem 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.product img {
+    width: 20rem;
+    cursor: pointer;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.adicionar {
+    margin-top: 0.4rem;
+    padding: 0px 1rem;
+    background-color: green;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    transition: all ease-in-out 0.2s;
+}
+
+.adicionar:hover {
+    background-color: rgb(0, 70, 0);
+    transition: all ease-in-out 0.2s;
+}
+
+.product h3 {
+    color: crimson;
+    cursor: pointer;
+}
+
+#like {
+    color: crimson;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    cursor: pointer;
+}
+
+.preco {
+    margin-right: 0.4rem;
+    color: white;
+    font-size: 20px;
+}
+
+#rodapeFixo {
+    position: fixed;
+    right: 0;
+    top: 25px;
+    padding: 0.2rem 0.2rem 0.2rem 0rem;
+    background-color: #1d1d1d;
+    margin-right: 0.2rem;
+}
+
+label {
+    color: white;
+}
+
+#rodapeFixo button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 0.4rem 0.4rem;
+    transition: all ease-in-out 0.4s;
+}
+
+#rodapeFixo #finalizar-compra:hover {
+    background-color: green;
+    transition: all ease-in-out 0.4s;
+}
+
+#rodapeFixo #limpar:hover {
+    background-color: crimson;
+    transition: all ease-in-out 0.4s;
+}
+
+#rodapeFixo input {
+    padding: 0.3rem 0.8rem;
+    width: 6.3rem;
+    background-color: #141414;
+    border: 2px solid black;
+    color: white;
+}
+
+#rodapeFixo span {
+    vertical-align: middle;
+    color: crimson;
+    margin-right: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+label {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.support img {
+    margin-top: 1.2rem;
+    float: left;
+    margin-right: 0.2rem;
+    padding-right: 2rem;
+    height: 70%;
+}
+
+.support {
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+#divEmail {
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    padding: 1rem;
+}
+
+#divEmail h1 {
+    color: green;
+    font-size: 30px;
+}
+
+#divEmail h3 {
+    margin-top: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+#divEmail input {
+    margin-top: 2rem;
+    font-size: 20px;
+    padding: 0.3rem;
+    width: 20rem;
+}
+
+#divEmail p {
+    font-size: 16px;
+}
+
+strong {
+    color: green;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #353535;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+    padding: 2rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.popup-content button {
+    margin-top: 1rem;
+    padding: 0.2rem 2rem;
+    border: none;
+    font-size: 15px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #830d25;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+
+.mostraTotal p {
+    font-size: 17px;
+    color: white;
+}
+
+.popup-content h2 {
+    color: crimson;
+}
+
+header .material-symbols-outlined {
+    margin-left: 10px;
+    transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 1250px) {
+    .support {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+    .support img {
+        height: 50%;
+    }
+    #rodapeFixo {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        right: auto;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        background-color: #1d1d1d;
+    }
+    #rodapeFixo label {
+        display: inline;
+    }
+}
+
+@media (min-width: 1647px) {
+    #box-1 {
+        margin: 6.5rem 13rem;
+    }
+}
+
+@media (min-width: 1809px) {
+    #box-1 {
+        margin: 6.5rem 15rem;
+    }
+}
+
+@media (min-width: 1870px) {
+    #box-1 {
+        margin: 6.5rem 18rem;
+    }
+}
+
+@media (max-width: 755px) {
+    #menu .menu-item {
+        display: none;
+    }
+    #logo {
+        margin: 0 auto;
+    }
+    #menu-mobile {
+        display: flex;
+    }
+    #menu {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 2rem 1rem 1rem;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+    #suporte-img {
+        height: 40%;
+    }
+    #box-1 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    #box-1 {
+        margin: 8rem 1rem;
+        padding: 1rem;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .product img {
+        width: 100%;
+    }
+    #rodapeFixo {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    #rodapeFixo input {
+        width: 30%;
+        padding: 0.1rem;
+    }
+    #rodapeFixo button {
+        padding: 0.3rem 0.5rem;
+    }
+    #btn-comprar {
+        padding: 0.2rem 0.5rem;
+        font-size: 14px;
+    }
+    .preco {
+        font-size: 16px;
+    }
+}
+
+.btnEmail {
+    padding: 0.5rem 3rem;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
